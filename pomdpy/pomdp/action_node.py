@@ -1,5 +1,5 @@
 from builtins import object
-
+import pomdpy.globals as gb
 
 class ActionNode(object):
     """
@@ -37,10 +37,11 @@ class ActionNode(object):
             child_node = self.observation_map.create_belief(obs)
             added = True
         
-        global bt_global
-        if(bt_global.all_bn_vis.get(id(child_node)) == None):
-            bt_global.all_bn_vis[id(child_node)]  = 1
-            bt_global.all_bn.append(child_node)
+        # global bt_global
+        if(gb.bt_global.all_bn_vis.get(id(child_node)) == None):
+            gb.bt_global.all_bn_vis[id(child_node)]  = 1
+            gb.bt_global.all_bn.append(child_node)
+            print(gb.bt_global.all_bn[0])
         
         return child_node, added
 

@@ -6,6 +6,7 @@ import abc
 from pomdpy.util import console
 from pomdpy.pomdp.belief_tree import BeliefTree
 from pomdpy.solvers import Solver
+import pomdpy.globals as gb
 
 module = "BeliefTreeSolver"
 
@@ -25,9 +26,9 @@ class BeliefTreeSolver(Solver):
         # flag for determining whether the solver is an on/off-policy learning algorithm
         self.disable_tree = False
 
-        global bt_global
-        bt_global = BeliefTree(agent)
-        self.belief_tree = bt_global
+        # global bt_global
+        gb.bt_global = BeliefTree(agent)
+        self.belief_tree = gb.bt_global
 
         # Initialize the Belief Tree
         self.belief_tree.reset()
