@@ -191,6 +191,7 @@ class Agent:
                                               step_result.action, step_result.observation, step_result.next_state)
 
             if step_result.is_terminal or not is_legal:
+                #KESHAV Add backprop for q-network
                 console(3, module, 'Terminated after episode step ' + str(i + 1))
                 break
 
@@ -212,56 +213,56 @@ class Agent:
 
         return eps
 
-    def run_value_iteration(self, solver, epoch):
-        run_start_time = time.time()
+    # def run_value_iteration(self, solver, epoch):
+    #     run_start_time = time.time()
 
-        reward = 0
-        discounted_reward = 0
-        discount = 1.0
+    #     reward = 0
+    #     discounted_reward = 0
+    #     discount = 1.0
 
-        solver.value_iteration(self.model.get_transition_matrix(),
-                               self.model.get_observation_matrix(),
-                               self.model.get_reward_matrix(),
-                               self.model.planning_horizon)
+    #     solver.value_iteration(self.model.get_transition_matrix(),
+    #                            self.model.get_observation_matrix(),
+    #                            self.model.get_reward_matrix(),
+    #                            self.model.planning_horizon)
 
-        b = self.model.get_initial_belief_state()
+    #     b = self.model.get_initial_belief_state()
 
-        for i in range(self.model.max_steps):
+    #     for i in range(self.model.max_steps):
 
-            # TODO: record average V(b) per epoch
-            action, v_b = solver.select_action(b, solver.gamma)
+    #         # TODO: record average V(b) per epoch
+    #         action, v_b = solver.select_action(b, solver.gamma)
 
-            step_result = self.model.generate_step(action)
+    #         step_result = self.model.generate_step(action)
 
-            if not step_result.is_terminal:
-                b = self.model.belief_update(b, action, step_result.observation)
+    #         if not step_result.is_terminal:
+    #             b = self.model.belief_update(b, action, step_result.observation)
 
-            reward += step_result.reward
-            discounted_reward += discount * step_result.reward
-            discount *= self.model.discount
+    #         reward += step_result.reward
+    #         discounted_reward += discount * step_result.reward
+    #         discount *= self.model.discount
 
-            # show the step result
-            self.display_step_result(i, step_result)
+    #         # show the step result
+    #         self.display_step_result(i, step_result)
 
-            if step_result.is_terminal:
-                console(3, module, 'Terminated after episode step ' + str(i + 1))
-                break
+    #         if step_result.is_terminal:
+    #             console(3, module, 'Terminated after episode step ' + str(i + 1))
+    #             break
 
-            # TODO: add belief state History sequence
+    #         # TODO: add belief state History sequence
 
-        self.results.time.add(time.time() - run_start_time)
-        self.results.update_reward_results(reward, discounted_reward)
+    #     self.results.time.add(time.time() - run_start_time)
+    #     self.results.update_reward_results(reward, discounted_reward)
 
-        # Pretty Print results
-        self.results.show(epoch)
-        console(3, module, 'Total possible undiscounted return: ' + str(self.model.get_max_undiscounted_return()))
-        print_divider('medium')
+    #     # Pretty Print results
+    #     self.results.show(epoch)
+    #     console(3, module, 'Total possible undiscounted return: ' + str(self.model.get_max_undiscounted_return()))
+    #     print_divider('medium')
 
-        self.experiment_results.time.add(self.results.time.running_total)
-        self.experiment_results.undiscounted_return.count += (self.results.undiscounted_return.count - 1)
-        self.experiment_results.undiscounted_return.add(self.results.undiscounted_return.running_total)
-        self.experiment_results.discounted_return.count += (self.results.discounted_return.count - 1)
-        self.experiment_results.discounted_return.add(self.results.discounted_return.running_total)
+    #     self.experiment_results.time.add(self.results.time.running_total)
+    #     self.experiment_results.undiscounted_return.count += (self.results.undiscounted_return.count - 1)
+    #     self.experiment_results.undiscounted_return.add(self.results.undiscounted_return.running_total)
+    #     self.experiment_results.discounted_return.count += (self.results.discounted_return.count - 1)
+    #     self.experiment_results.discounted_return.add(self.results.discounted_return.running_total)
 
     @staticmethod
     def display_step_result(step_num, step_result):

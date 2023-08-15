@@ -25,7 +25,9 @@ class BeliefTreeSolver(Solver):
         # flag for determining whether the solver is an on/off-policy learning algorithm
         self.disable_tree = False
 
-        self.belief_tree = BeliefTree(agent)
+        global bt_global
+        bt_global = BeliefTree(agent)
+        self.belief_tree = bt_global
 
         # Initialize the Belief Tree
         self.belief_tree.reset()

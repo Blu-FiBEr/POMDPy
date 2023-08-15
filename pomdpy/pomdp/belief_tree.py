@@ -14,6 +14,10 @@ class BeliefTree(BeliefStructure):
         super(BeliefTree, self).__init__()
         self.agent = agent
         self.root = None
+        
+        #KESHAV
+        self.all_bn = []
+        self.all_bn_vis = {}
 
     # --------- TREE MODIFICATION ------- #
     def reset(self):
@@ -45,6 +49,9 @@ class BeliefTree(BeliefStructure):
     def initialize(self, init_value=None):
         self.reset_root_data()
         self.root.action_map = self.agent.action_pool.create_action_mapping(self.root)
+        self.all_bn.append(self.root)
+        self.all_bn_vis[id(self.root)] = 1
+
 
     def prune_tree(self, bt):
         """
@@ -91,6 +98,11 @@ class BeliefTree(BeliefStructure):
         :param bn:
         :return:
         """
+        
+        #KESHAV
+        self.all_bn.clear()
+        self.all_bn_vis.clear()
+
         if bn is None:
             return
 
@@ -107,3 +119,7 @@ class BeliefTree(BeliefStructure):
                     # if the belief node is not the new root of the belief tree, prune it
                     if obs_mapping_entry.child_node is not bn:
                         self.prune_node(obs_mapping_entry.child_node)
+
+        self.all_bn.append(bn)
+        self.all_bn_vis[id(bn)] = 1
+
