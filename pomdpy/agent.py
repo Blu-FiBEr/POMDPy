@@ -30,7 +30,8 @@ class Agent:
         self.histories = Histories()
         self.action_pool = self.model.create_action_pool()
         self.observation_pool = self.model.create_observation_pool(self)
-        self.solver_factory = solver.reset  # Factory method for generating instances of the solver
+        # Factory method for generating instances of the solver
+        self.solver_factory = solver.reset
 
     def discounted_return(self):
 
@@ -55,7 +56,8 @@ class Agent:
                 ' +- ' + str(self.experiment_results.undiscounted_return.std_err()))
         console(2, module, 'ave discounted return/step: ' + str(self.experiment_results.discounted_return.mean) +
                 ' +- ' + str(self.experiment_results.discounted_return.std_err()))
-        console(2, module, 'ave time/epoch: ' + str(self.experiment_results.time.mean))
+        console(2, module, 'ave time/epoch: ' +
+                str(self.experiment_results.time.mean))
 
         self.logger.info('env: ' + self.model.env + '\t' +
                          'epochs: ' + str(self.model.n_epochs) + '\t' +
@@ -92,7 +94,8 @@ class Agent:
                         step_result = self.model.generate_step(action)
 
                         if not step_result.is_terminal:
-                            belief = self.model.belief_update(belief, action, step_result.observation)
+                            belief = self.model.belief_update(
+                                belief, action, step_result.observation)
 
                         reward += step_result.reward
                         discounted_reward += discount * step_result.reward
@@ -108,7 +111,8 @@ class Agent:
                     self.experiment_results.undiscounted_return.count += 1
                     self.experiment_results.undiscounted_return.add(reward)
                     self.experiment_results.discounted_return.count += 1
-                    self.experiment_results.discounted_return.add(discounted_reward)
+                    self.experiment_results.discounted_return.add(
+                        discounted_reward)
 
                     summary = sess.run([solver.experiment_summary], feed_dict={
                         solver.avg_undiscounted_return: self.experiment_results.undiscounted_return.mean,
@@ -117,7 +121,8 @@ class Agent:
                         solver.avg_discounted_return_std_dev: self.experiment_results.discounted_return.std_dev()
                     })
                     for summary_str in summary:
-                        solver.summary_ops['writer'].add_summary(summary_str, epoch)
+                        solver.summary_ops['writer'].add_summary(
+                            summary_str, epoch)
 
                     # TODO: save model at checkpoints
                 else:
@@ -191,7 +196,7 @@ class Agent:
                                               step_result.action, step_result.observation, step_result.next_state)
 
             if step_result.is_terminal or not is_legal:
-                #KESHAV Add backprop for q-network
+
                 console(3, module, 'Terminated after episode step ' + str(i + 1))
                 break
 
@@ -202,14 +207,19 @@ class Agent:
         # print_divider('large')
         solver.history.show()
         self.results.show(epoch)
-        console(3, module, 'Total possible undiscounted return: ' + str(self.model.get_max_undiscounted_return()))
+        console(3, module, 'Total possible undiscounted return: ' +
+                str(self.model.get_max_undiscounted_return()))
         print_divider('medium')
 
         self.experiment_results.time.add(self.results.time.running_total)
-        self.experiment_results.undiscounted_return.count += (self.results.undiscounted_return.count - 1)
-        self.experiment_results.undiscounted_return.add(self.results.undiscounted_return.running_total)
-        self.experiment_results.discounted_return.count += (self.results.discounted_return.count - 1)
-        self.experiment_results.discounted_return.add(self.results.discounted_return.running_total)
+        self.experiment_results.undiscounted_return.count += (
+            self.results.undiscounted_return.count - 1)
+        self.experiment_results.undiscounted_return.add(
+            self.results.undiscounted_return.running_total)
+        self.experiment_results.discounted_return.count += (
+            self.results.discounted_return.count - 1)
+        self.experiment_results.discounted_return.add(
+            self.results.discounted_return.running_total)
 
         return eps
 
@@ -273,8 +283,10 @@ class Agent:
         :return:
         """
         console(3, module, 'Step Number = ' + str(step_num))
-        console(3, module, 'Step Result.Action = ' + step_result.action.to_string())
-        console(3, module, 'Step Result.Observation = ' + step_result.observation.to_string())
+        console(3, module, 'Step Result.Action = ' +
+                step_result.action.to_string())
+        console(3, module, 'Step Result.Observation = ' +
+                step_result.observation.to_string())
         # console(3, module, 'Step Result.Next_State = ' + step_result.next_state.to_string())
         console(3, module, 'Step Result.Reward = ' + str(step_result.reward))
 
@@ -283,6 +295,7 @@ class Results(object):
     """
     Maintain the statistics for each run
     """
+
     def __init__(self):
         self.time = Statistic('Time')
         self.discounted_return = Statistic('discounted return')

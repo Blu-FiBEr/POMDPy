@@ -18,6 +18,7 @@ class BeliefTreeSolver(Solver):
 
     Provides a belief search tree and supports on- and off-policy methods
     """
+
     def __init__(self, agent):
         super(BeliefTreeSolver, self).__init__(agent)
         # The agent owns Histories, the collection of History Sequences.
@@ -107,18 +108,21 @@ class BeliefTreeSolver(Solver):
             step_result, is_legal = self.model.generate_step(state, action)
 
             if not step_result.is_terminal:
-                child_node, added = belief_node.create_or_get_child(step_result.action, step_result.observation)
+                child_node, added = belief_node.create_or_get_child(
+                    step_result.action, step_result.observation)
                 child_node.state_particles.append(step_result.next_state)
                 delayed_reward = self.rollout(child_node)
             else:
                 delayed_reward = 0
 
-            action_mapping_entry = belief_node.action_map.get_entry(step_result.action.bin_number)
+            action_mapping_entry = belief_node.action_map.get_entry(
+                step_result.action.bin_number)
 
             q_value = action_mapping_entry.mean_q_value
 
             # Random policy
-            q_value += (step_result.reward + self.model.discount * delayed_reward - q_value)
+            q_value += (step_result.reward + self.model.discount *
+                        delayed_reward - q_value)
 
             action_mapping_entry.update_visit_count(1)
             action_mapping_entry.update_q_value(q_value)
@@ -142,7 +146,8 @@ class BeliefTreeSolver(Solver):
 
         while num_steps < self.model.max_depth and not is_terminal:
             legal_action = random.choice(legal_actions)
-            step_result, is_legal = self.model.generate_step(state, legal_action)
+            step_result, is_legal = self.model.generate_step(
+                state, legal_action)
             is_terminal = step_result.is_terminal
             discounted_reward_sum += step_result.reward * discount
             discount *= self.model.discount
@@ -167,30 +172,36 @@ class BeliefTreeSolver(Solver):
         # This is important in case there are certain actions that change the state of the simulator
         self.model.update(step_result)
 
-        child_belief_node = self.belief_tree_index.get_child(step_result.action, step_result.observation)
+        child_belief_node = self.belief_tree_index.get_child(
+            step_result.action, step_result.observation)
 
         # If the child_belief_node is None because the step result randomly produced a different observation,
         # grab any of the beliefs extending from the belief node's action node
         if child_belief_node is None:
-            action_node = self.belief_tree_index.action_map.get_action_node(step_result.action)
+            action_node = self.belief_tree_index.action_map.get_action_node(
+                step_result.action)
             if action_node is None:
                 # I grabbed a child belief node that doesn't have an action node. Use rollout from here on out.
-                console(2, module, "Reached branch with no leaf nodes, using random rollout to finish the episode")
+                console(
+                    2, module, "Reached branch with no leaf nodes, using random rollout to finish the episode")
                 self.disable_tree = True
                 return
 
-            obs_mapping_entries = list(action_node.observation_map.child_map.values())
+            obs_mapping_entries = list(
+                action_node.observation_map.child_map.values())
 
             for entry in obs_mapping_entries:
                 if entry.child_node is not None:
                     child_belief_node = entry.child_node
-                    console(2, module, "Had to grab nearest belief node...variance added")
+                    console(
+                        2, module, "Had to grab nearest belief node...variance added")
                     break
 
         # If the new root does not yet have the max possible number of particles add some more
         if child_belief_node.state_particles.__len__() < self.model.max_particle_count:
 
-            num_to_add = self.model.max_particle_count - child_belief_node.state_particles.__len__()
+            num_to_add = self.model.max_particle_count - \
+                child_belief_node.state_particles.__len__()
 
             # Generate particles for the new root node
             child_belief_node.state_particles += self.model.generate_particles(self.belief_tree_index, step_result.action,
@@ -202,15 +213,15 @@ class BeliefTreeSolver(Solver):
                 child_belief_node.state_particles += self.model.generate_particles_uninformed(self.belief_tree_index,
                                                                                               step_result.action,
                                                                                               step_result.observation,
-                                                                                        self.model.min_particle_count)
+                                                                                              self.model.min_particle_count)
 
         # Failed to continue search- ran out of particles
         if child_belief_node is None or child_belief_node.state_particles.__len__() == 0:
-            console(1, module, "Couldn't refill particles, must use random rollout to finish episode")
+            console(
+                1, module, "Couldn't refill particles, must use random rollout to finish episode")
             self.disable_tree = True
             return
 
         self.belief_tree_index = child_belief_node
         if prune:
             self.prune(self.belief_tree_index)
-

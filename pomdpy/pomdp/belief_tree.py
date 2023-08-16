@@ -10,12 +10,13 @@ class BeliefTree(BeliefStructure):
     * Most of the work is done in the individual classes for the mappings and nodes; this class
     * simply owns a root node and handles pruning
     """
+
     def __init__(self, agent):
         super(BeliefTree, self).__init__()
         self.agent = agent
         self.root = None
-        
-        #KESHAV
+
+        # KESHAV
         self.all_bn = []
         self.all_bn_vis = {}
 
@@ -34,7 +35,8 @@ class BeliefTree(BeliefStructure):
         Completely resets the root data
         :return:
         """
-        self.root.data = self.agent.model.create_root_historical_data(self.agent)
+        self.root.data = self.agent.model.create_root_historical_data(
+            self.agent)
 
     def reset_data(self, root_data=None):
         """
@@ -48,10 +50,10 @@ class BeliefTree(BeliefStructure):
 
     def initialize(self, init_value=None):
         self.reset_root_data()
-        self.root.action_map = self.agent.action_pool.create_action_mapping(self.root)
+        self.root.action_map = self.agent.action_pool.create_action_mapping(
+            self.root)
         self.all_bn.append(self.root)
         self.all_bn_vis[id(self.root)] = 1
-
 
     def prune_tree(self, bt):
         """
@@ -98,8 +100,8 @@ class BeliefTree(BeliefStructure):
         :param bn:
         :return:
         """
-        
-        #KESHAV
+
+        # KESHAV
         self.all_bn.clear()
         self.all_bn_vis.clear()
 
@@ -122,4 +124,3 @@ class BeliefTree(BeliefStructure):
 
         self.all_bn.append(bn)
         self.all_bn_vis[id(bn)] = 1
-

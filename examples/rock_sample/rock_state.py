@@ -41,7 +41,9 @@ class RockState(DiscreteState):
         Returns a decimal value representing the binary state string
         :return:
         """
-        return int(self.to_string(), 2)
+    # res = ''.join(format(ord(i), '08b') for i in self.to_string())
+        # return int(res, 2)
+        return (self.position.to_string(), tuple(self.rock_states))
 
     def to_string(self):
         state_string = self.position.to_string()

@@ -7,6 +7,7 @@ import numpy as np
 from pomdpy.util import console
 from pomdpy.action_selection import ucb_action
 from .belief_tree_solver import BeliefTreeSolver
+import pomdpy.globals as gb
 
 module = "pomcp"
 
@@ -30,14 +31,16 @@ class POMCP(BeliefTreeSolver):
         super(POMCP, self).__init__(agent)
 
         # Pre-calculate UCB values for a speed-up
-        self.fast_UCB = [[None for _ in range(POMCP.UCB_n)] for _ in range(POMCP.UCB_N)]
+        self.fast_UCB = [[None for _ in range(
+            POMCP.UCB_n)] for _ in range(POMCP.UCB_N)]
 
         for N in range(POMCP.UCB_N):
             for n in range(POMCP.UCB_n):
                 if n is 0:
                     self.fast_UCB[N][n] = np.inf
                 else:
-                    self.fast_UCB[N][n] = agent.model.ucb_coefficient * np.sqrt(old_div(np.log(N + 1), n))
+                    self.fast_UCB[N][n] = agent.model.ucb_coefficient * \
+                        np.sqrt(old_div(np.log(N + 1), n))
 
     @staticmethod
     def reset(agent):
@@ -75,6 +78,10 @@ class POMCP(BeliefTreeSolver):
             self.rollout_search(self.belief_tree_index)
         else:
             self.monte_carlo_approx(eps, start_time)
+        # KESHAV train qnn
+
+        # print(gb.get_belief_state(gb.bt_global.all_bn[0]))
+        print(gb.get_qvals(gb.bt_global.all_bn[0]))
         return ucb_action(self, self.belief_tree_index, True)
 
     def simulate(self, belief_node, eps, start_time):
@@ -105,7 +112,8 @@ class POMCP(BeliefTreeSolver):
 
         child_belief_node = belief_node.child(action, step_result.observation)
         if child_belief_node is None and not step_result.is_terminal and belief_node.action_map.total_visit_count > 0:
-            child_belief_node, added = belief_node.create_or_get_child(action, step_result.observation)
+            child_belief_node, added = belief_node.create_or_get_child(
+                action, step_result.observation)
 
         if not step_result.is_terminal or not is_legal:
             tree_depth += 1
@@ -113,8 +121,10 @@ class POMCP(BeliefTreeSolver):
                 # Add S' to the new belief node
                 # Add a state particle with the new state
                 if child_belief_node.state_particles.__len__() < self.model.max_particle_count:
-                    child_belief_node.state_particles.append(step_result.next_state)
-                delayed_reward = self.traverse(child_belief_node, tree_depth, start_time)
+                    child_belief_node.state_particles.append(
+                        step_result.next_state)
+                delayed_reward = self.traverse(
+                    child_belief_node, tree_depth, start_time)
             else:
                 delayed_reward = self.rollout(belief_node)
             tree_depth -= 1
@@ -123,12 +133,14 @@ class POMCP(BeliefTreeSolver):
 
         # delayed_reward is "Q maximal"
         # current_q_value is the Q value of the current belief-action pair
-        action_mapping_entry = belief_node.action_map.get_entry(action.bin_number)
+        action_mapping_entry = belief_node.action_map.get_entry(
+            action.bin_number)
 
         q_value = action_mapping_entry.mean_q_value
 
         # off-policy Q learning update rule
-        q_value += (step_result.reward + (self.model.discount * delayed_reward) - q_value)
+        q_value += (step_result.reward +
+                    (self.model.discount * delayed_reward) - q_value)
 
         action_mapping_entry.update_visit_count(1)
         action_mapping_entry.update_q_value(q_value)
