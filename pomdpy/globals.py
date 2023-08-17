@@ -1,7 +1,7 @@
 import numpy as np
-
+import pomdpy.qnn as qnn
 bt_global = None
-
+q_network = qnn.NN(50 , 0.001)
 
 def get_belief_state(bn):
     pt_filter = bn.state_particles
@@ -23,7 +23,7 @@ def get_belief_state(bn):
         posx, posy = cleaned_string.split(',')
         posx = int(posx)
         posy = int(posy)
-
+        # print("size" + str(len(key[1])))
         curr_state_list = [posx, posy] + list(key[1])
         curr_state_ar = np.array(curr_state_list)
         belief_state += fraction * curr_state_ar
@@ -34,6 +34,7 @@ def get_belief_state(bn):
 def get_qvals(bn):
     mapping = bn.action_map
     actions = list(mapping.entries.values())
+    # print((actions[6].bin_number))
     qval = []
     for action_entry in actions:
         current_q = action_entry.mean_q_value

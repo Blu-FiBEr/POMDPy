@@ -8,9 +8,9 @@ from pomdpy.util import console
 from pomdpy.action_selection import ucb_action
 from .belief_tree_solver import BeliefTreeSolver
 import pomdpy.globals as gb
-
+import pomdpy.qnn as qnn
 module = "pomcp"
-
+import torch
 
 class POMCP(BeliefTreeSolver):
     """
@@ -81,7 +81,21 @@ class POMCP(BeliefTreeSolver):
         # KESHAV train qnn
 
         # print(gb.get_belief_state(gb.bt_global.all_bn[0]))
-        print(gb.get_qvals(gb.bt_global.all_bn[0]))
+        # print(gb.get_qvals(gb.bt_global.all_bn[0]))
+        X = []
+        y = []
+        for bn in gb.bt_global.all_bn : 
+            X.append(gb.get_belief_state(bn))
+            y.append(gb.get_qvals(bn))
+        X = np.array(X)
+        y = np.array(y)
+        X_tensor = torch.tensor(X).to(device = 'cuda')
+        y_tensor = torch.tensor(y).to(device = 'cuda')
+        model = gb.q_network
+        model.train(X_tensor,y_tensor)
+
+        
+
         return ucb_action(self, self.belief_tree_index, True)
 
     def simulate(self, belief_node, eps, start_time):
