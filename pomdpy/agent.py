@@ -140,6 +140,7 @@ class Agent:
         self.model.reset_for_epoch()
 
         for i in range(self.model.n_epochs):
+        # for i in range(1):
             # Reset the epoch stats
             self.results = Results()
 

@@ -1,0 +1,1317 @@
+{'action_selection_timeout': 60,
+ 'discount': 0.95,
+ 'env': 'RockSample',
+ 'epsilon_decay': 0.99,
+ 'epsilon_decay_step': 20,
+ 'epsilon_minimum': 0.1,
+ 'epsilon_start': 1.0,
+ 'max_depth': 100,
+ 'max_particle_count': 2000,
+ 'max_steps': 200,
+ 'min_particle_count': 1000,
+ 'n_epochs': 1,
+ 'n_sims': 500,
+ 'n_start_states': 2000,
+ 'preferred_actions': True,
+ 'save': False,
+ 'seed': 123,
+ 'solver': 'POMCP',
+ 'test': 10,
+ 'timeout': 3600,
+ 'ucb_coefficient': 3.0,
+ 'use_tf': False}
+ .  0x0  .   .   .   .   .   .   .   .  0x1  .   .   .  G 
+
+ .   .   .   .  0x2  .   .   .   .   .   .   .   .   .  G 
+
+ .   .   .   .   .   .  0x3  .   .   .   .   .   .   .  G 
+
+ .   .   .   .   .   .   .   .   .   .   .   .   .   .  G 
+
+ .   .   .   .   .  0x4  .   .   .   .   .   .  0x5  .  G 
+
+ .   .   .   .   .   .   .   .   .   .   .   .   .   .  G 
+
+ .   .   .   .   .   .   .   .   .   .   .   .  0x6  .  G 
+
+ .   .   .  0x7  .   .   .   .   .   .   .   .   .   .  G 
+
+ .   .   .   .   .   .   .  0x8  .   .   .   .   .   .  G 
+
+ .  0x9  .   .   .   .   .   .   .   .   .   .   .   .  G 
+
+ .   .   .   .   .   .   .   .   .   .   .   .   .   .  G 
+
+ .   .   .   .   .   .  0xa  .   .   .   .   .   .   .  G 
+
+ .   .   .  0xb  .   .   .   .   .   .   .   .  0xc  .  G 
+
+ .   .   .   .   .   .   .   .   .   .   .   .   .   .  G 
+
+ .   .  0xd  .   .   .   .   .   .   .  0xe  .   .   .  G 
+
+RockModel - Actual rock states = [0, 2, 4, 8, 16, 32, 64, 128, 256, 0, 1024, 2048, 0, 0, 16384]
+tensor(1629.2850, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(3896.3467, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(963.8208, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(249.1472, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(237.2674, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(290.6762, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(252.0765, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(184.9102, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(128.6295, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(84.8809, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(53.0654, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(32.2705, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(20.9704, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(15.7603, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(14.7090, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(15.5330, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(15.1491, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(13.3950, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(12.3218, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(11.5632, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(10.1156, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(8.3265, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(6.4784, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(5.0454, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(4.1863, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(3.7317, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(3.3322, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(3.0955, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(2.9069, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(2.6884, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(2.4708, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(2.2671, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(2.0455, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(1.8159, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(1.6122, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(1.4208, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(1.2470, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(1.1200, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(1.0364, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.9792, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.9332, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.8918, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.8448, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.7823, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.7216, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.6735, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.6277, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.5813, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.5394, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.5094, device='cuda:0', grad_fn=<MseLossBackward0>)
+agent - Step Number = 0
+agent - Step Result.Action = CHECK
+agent - Step Result.Observation = 0
+agent - Step Result.Reward = 0
+BeliefTreeSolver - Time spent pruning = 0.0032227039337158203 seconds
+tensor(0.6869, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.6570, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.6452, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.6184, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.5951, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.5718, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.5528, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.5326, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.5197, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.5098, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.4995, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.4857, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.4730, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.4608, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.4475, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.4387, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.4303, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.4256, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.4175, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.4098, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.4035, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.3999, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.3950, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.3896, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.3858, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.3823, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.3774, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.3730, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.3693, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.3667, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.3630, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.3589, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.3570, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.3545, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.3512, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.3481, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.3466, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.3442, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.3417, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.3395, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.3380, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.3363, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.3345, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.3328, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.3345, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.3307, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.3289, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.3278, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.3267, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.3252, device='cuda:0', grad_fn=<MseLossBackward0>)
+agent - Step Number = 1
+agent - Step Result.Action = CHECK
+agent - Step Result.Observation = Good
+agent - Step Result.Reward = 0
+BeliefTreeSolver - Time spent pruning = 0.003872394561767578 seconds
+tensor(0.2512, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.2451, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.2399, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.2297, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.2281, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.2239, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.2144, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.2138, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.2081, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.2064, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.2008, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.2024, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.1966, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.1976, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.1920, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.1900, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.1890, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.1857, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.1853, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.1825, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.1815, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.1786, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.1789, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.1758, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.1772, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.1734, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.1743, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.1725, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.1720, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.1709, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.1708, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.1691, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.1699, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.1677, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.1681, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.1667, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.1667, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.1658, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.1656, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.1648, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.1647, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.1636, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.1638, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.1630, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.1629, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.1624, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.1622, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.1620, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.1616, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.1613, device='cuda:0', grad_fn=<MseLossBackward0>)
+agent - Step Number = 2
+agent - Step Result.Action = NORTH
+agent - Step Result.Observation = EMPTY
+agent - Step Result.Reward = 0
+BeliefTreeSolver - Time spent pruning = 0.0016202926635742188 seconds
+tensor(0.0853, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.0838, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.0833, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.0826, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.0820, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.0812, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.0806, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.0805, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.0803, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.0797, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.0795, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.0797, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.0797, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.0805, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.0788, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.0787, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.0801, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.0789, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.0781, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.0789, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.0776, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.0775, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.0776, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.0768, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.0769, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.0765, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.0764, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.0763, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.0760, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.0759, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.0757, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.0755, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.0755, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.0753, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.0752, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.0751, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.0750, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.0749, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.0747, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.0747, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.0745, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.0744, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.0744, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.0743, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.0742, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.0741, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.0741, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.0740, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.0739, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.0738, device='cuda:0', grad_fn=<MseLossBackward0>)
+agent - Step Number = 3
+agent - Step Result.Action = EAST
+agent - Step Result.Observation = EMPTY
+agent - Step Result.Reward = 0
+BeliefTreeSolver - Time spent pruning = 0.0034182071685791016 seconds
+tensor(0.2788, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.2753, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.2699, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.2684, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.2662, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.2648, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.2634, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.2607, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.2604, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.2571, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.2582, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.2556, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.2554, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.2528, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.2520, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.2501, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.2483, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.2476, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.2450, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.2443, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.2425, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.2448, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.2407, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.2408, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.2362, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.2352, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.2315, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.2311, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.2280, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.2310, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.2312, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.2252, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.2260, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.2247, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.2389, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.2257, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.2346, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.2254, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.2309, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.2234, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.2285, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.2210, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.2265, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.2202, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.2239, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.2198, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.2223, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.2195, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.2206, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.2194, device='cuda:0', grad_fn=<MseLossBackward0>)
+agent - Step Number = 4
+agent - Step Result.Action = EAST
+agent - Step Result.Observation = EMPTY
+agent - Step Result.Reward = 0
+BeliefTreeSolver - Time spent pruning = 0.004289865493774414 seconds
+tensor(0.4828, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.3425, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.3463, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.2893, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.2753, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.2550, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.2064, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.1888, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.1645, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.1647, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.1656, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.1436, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.1363, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.1233, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.1062, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.1033, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.0964, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.0822, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.0716, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.0635, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.0545, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.0460, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.0400, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.0314, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.0235, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.0192, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.0162, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.0132, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.0102, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.0082, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.0056, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.0039, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.0034, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.0032, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.0028, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.0024, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.0024, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.0019, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.0020, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.0026, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.0030, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.0030, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.0028, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.0030, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.0029, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.0029, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.0030, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.0029, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.0026, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.0023, device='cuda:0', grad_fn=<MseLossBackward0>)
+agent - Step Number = 5
+agent - Step Result.Action = EAST
+agent - Step Result.Observation = EMPTY
+agent - Step Result.Reward = 0
+BeliefTreeSolver - Time spent pruning = 0.0016863346099853516 seconds
+tensor(1.5427, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.9162, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.7772, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.7384, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.6411, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.5919, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.5568, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.5171, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.4636, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.4127, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.3851, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.3567, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.3236, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.2969, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.2772, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.2599, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.2401, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.2124, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.1820, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.1641, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.1613, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.1567, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.1395, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.1188, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.1065, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.1004, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.0911, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.0788, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.0713, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.0690, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.0641, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.0552, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.0480, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.0448, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.0418, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.0373, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.0337, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.0317, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.0301, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.0282, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.0258, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.0227, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.0194, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.0172, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.0162, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.0152, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.0137, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.0121, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.0110, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.0099, device='cuda:0', grad_fn=<MseLossBackward0>)
+agent - Step Number = 6
+agent - Step Result.Action = NORTH
+agent - Step Result.Observation = EMPTY
+agent - Step Result.Reward = 0
+BeliefTreeSolver - Time spent pruning = 0.0009849071502685547 seconds
+tensor(0.0229, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.0186, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.0143, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.0125, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.0119, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.0110, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.0093, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.0067, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.0045, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.0033, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.0029, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.0029, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.0032, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.0031, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.0025, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.0021, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.0021, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.0023, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.0023, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.0020, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.0014, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.0010, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.0009, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.0010, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.0009, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.0007, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.0004, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.0003, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.0004, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.0005, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.0006, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.0005, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.0004, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.0003, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.0004, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.0004, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.0004, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.0003, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.0002, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.0002, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.0002, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.0002, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.0002, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.0002, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.0001, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.0001, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.0001, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.0001, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.0001, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(7.9752e-05, device='cuda:0', grad_fn=<MseLossBackward0>)
+agent - Step Number = 7
+agent - Step Result.Action = NORTH
+agent - Step Result.Observation = EMPTY
+agent - Step Result.Reward = 0
+BeliefTreeSolver - Time spent pruning = 0.0008840560913085938 seconds
+tensor(2.7605, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(2.1383, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(1.8026, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(1.5437, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(1.2650, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(1.2211, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(1.2838, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(1.0285, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.9676, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.9187, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.7936, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.8773, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.9611, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.8322, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.7177, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.6686, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.5853, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.5644, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.5966, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.5424, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.4604, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.4176, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.3537, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.2976, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.3011, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.2895, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.2300, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.1871, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.1640, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.1341, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.1202, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.1191, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.1018, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.0823, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.0716, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.0557, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.0450, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.0497, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.0491, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.0378, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.0308, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.0259, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.0183, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.0163, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.0178, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.0149, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.0117, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.0099, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.0061, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.0041, device='cuda:0', grad_fn=<MseLossBackward0>)
+agent - Step Number = 8
+agent - Step Result.Action = EAST
+agent - Step Result.Observation = EMPTY
+agent - Step Result.Reward = 0
+BeliefTreeSolver - Time spent pruning = 0.00048232078552246094 seconds
+tensor(2.8837, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(2.2793, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(1.7932, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(1.5547, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(1.4906, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(1.4083, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(1.2709, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(1.1015, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.9492, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.8468, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.8046, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.8115, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.8178, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.7663, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.6544, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.5360, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.4664, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.4448, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.4482, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.4295, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.3705, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.2899, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.2187, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.1729, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.1492, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.1402, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.1208, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.1023, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.0910, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.0772, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.0705, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.0655, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.0627, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.0629, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.0591, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.0553, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.0509, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.0464, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.0452, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.0433, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.0403, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.0346, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.0258, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.0186, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.0139, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.0122, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.0120, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.0105, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.0091, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.0078, device='cuda:0', grad_fn=<MseLossBackward0>)
+agent - Step Number = 9
+agent - Step Result.Action = SOUTH
+agent - Step Result.Observation = EMPTY
+agent - Step Result.Reward = 0
+BeliefTreeSolver - Time spent pruning = 0.0003292560577392578 seconds
+tensor(2.9377, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(2.0938, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(1.8330, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(1.5168, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(1.3421, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(1.4004, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(1.4737, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(1.3507, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(1.1956, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(1.1390, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(1.1320, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(1.0774, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.9983, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.9726, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(1.0043, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(1.0224, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.9864, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.9265, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.8818, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.8526, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.8240, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.7983, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.7744, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.7517, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.7270, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.6923, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.6483, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.6072, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.5787, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.5599, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.5379, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.5087, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.4756, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.4462, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.4209, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.3953, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.3680, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.3423, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.3202, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.2998, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.2785, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.2567, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.2364, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.2179, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.1997, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.1819, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.1659, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.1519, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.1389, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.1256, device='cuda:0', grad_fn=<MseLossBackward0>)
+agent - Step Number = 10
+agent - Step Result.Action = EAST
+agent - Step Result.Observation = EMPTY
+agent - Step Result.Reward = 0
+BeliefTreeSolver - Time spent pruning = 0.00014472007751464844 seconds
+tensor(0.1229, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.1062, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.0949, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.0871, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.0771, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.0660, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.0586, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.0547, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.0497, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.0426, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.0365, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.0329, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.0296, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.0256, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.0221, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.0205, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.0192, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.0168, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.0141, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.0124, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.0115, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.0103, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.0088, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.0079, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.0074, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.0066, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.0055, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.0047, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.0043, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.0040, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.0035, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.0030, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.0027, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.0025, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.0021, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.0017, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.0015, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.0014, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.0012, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.0010, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.0009, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.0008, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.0007, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.0005, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.0004, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.0004, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.0004, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.0003, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.0002, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.0002, device='cuda:0', grad_fn=<MseLossBackward0>)
+agent - Step Number = 11
+agent - Step Result.Action = EAST
+agent - Step Result.Observation = EMPTY
+agent - Step Result.Reward = 0
+BeliefTreeSolver - Time spent pruning = 0.0002090930938720703 seconds
+tensor(0.0204, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.0184, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.0158, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.0134, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.0114, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.0096, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.0079, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.0066, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.0053, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.0041, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.0031, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.0026, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.0024, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.0021, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.0020, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.0020, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.0021, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.0022, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.0022, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.0022, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.0022, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.0021, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.0019, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.0016, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.0013, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.0010, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.0007, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.0005, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.0004, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.0003, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.0003, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.0002, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.0002, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.0002, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.0002, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.0002, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.0002, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.0003, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.0003, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.0003, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.0003, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.0003, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.0002, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.0002, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.0002, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.0001, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.0001, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(8.4215e-05, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(6.1318e-05, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(4.8789e-05, device='cuda:0', grad_fn=<MseLossBackward0>)
+agent - Step Number = 12
+agent - Step Result.Action = EAST
+agent - Step Result.Observation = EMPTY
+agent - Step Result.Reward = 0
+BeliefTreeSolver - Time spent pruning = 0.00014901161193847656 seconds
+tensor(0.1352, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.1093, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.0864, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.0802, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.0845, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.0807, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.0679, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.0565, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.0505, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.0479, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.0428, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.0366, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.0316, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.0276, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.0239, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.0198, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.0173, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.0156, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.0135, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.0108, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.0083, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.0073, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.0065, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.0050, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.0030, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.0017, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.0020, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.0027, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.0026, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.0018, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.0015, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.0020, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.0025, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.0023, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.0019, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.0017, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.0017, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.0018, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.0019, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.0019, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.0016, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.0012, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.0011, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.0012, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.0012, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.0010, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.0008, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.0007, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.0007, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.0007, device='cuda:0', grad_fn=<MseLossBackward0>)
+agent - Step Number = 13
+agent - Step Result.Action = EAST
+agent - Step Result.Observation = EMPTY
+agent - Step Result.Reward = 0
+BeliefTreeSolver - Time spent pruning = 1.5020370483398438e-05 seconds
+tensor(0.0093, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.0059, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.0027, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.0019, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.0029, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.0036, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.0034, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.0027, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.0020, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.0013, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.0008, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.0008, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.0012, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.0017, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.0017, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.0011, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.0005, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.0004, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.0008, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.0010, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.0009, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.0007, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.0004, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.0003, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.0003, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.0003, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.0003, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.0004, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.0004, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.0003, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.0001, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(9.7167e-05, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.0002, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.0002, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.0002, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.0002, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.0001, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(8.6772e-05, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(8.5835e-05, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(8.1744e-05, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(7.9163e-05, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(8.0142e-05, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(7.3031e-05, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(5.0574e-05, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(2.5490e-05, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(1.8567e-05, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(3.2903e-05, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(4.8583e-05, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(4.6488e-05, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(3.0129e-05, device='cuda:0', grad_fn=<MseLossBackward0>)
+agent - Step Number = 14
+agent - Step Result.Action = EAST
+agent - Step Result.Observation = EMPTY
+agent - Step Result.Reward = 0
+BeliefTreeSolver - Time spent pruning = 1.5735626220703125e-05 seconds
+tensor(0.0330, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.0287, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.0274, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.0168, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.0105, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.0134, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.0057, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.0047, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.0061, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.0065, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.0103, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.0057, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.0056, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.0054, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.0064, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.0029, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.0027, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.0020, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.0023, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.0011, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.0019, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.0019, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.0018, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.0016, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.0019, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.0019, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.0013, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.0011, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.0007, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.0007, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.0003, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.0006, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.0004, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.0004, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.0004, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.0006, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.0004, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.0004, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.0004, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.0004, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.0003, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.0002, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.0002, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.0002, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.0001, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(4.9032e-05, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.0001, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.0001, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.0001, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.0001, device='cuda:0', grad_fn=<MseLossBackward0>)
+agent - Step Number = 15
+agent - Step Result.Action = EAST
+agent - Step Result.Observation = EMPTY
+agent - Step Result.Reward = 0
+BeliefTreeSolver - Time spent pruning = 1.6689300537109375e-05 seconds
+tensor(0.0166, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.0110, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.0046, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.0058, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.0068, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.0052, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.0031, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.0018, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.0038, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.0048, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.0033, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.0028, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.0027, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.0033, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.0033, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.0015, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.0007, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.0007, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.0010, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.0015, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.0010, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.0009, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.0010, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.0011, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.0010, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.0005, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.0004, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.0005, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.0006, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.0004, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.0001, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.0002, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.0003, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.0004, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.0004, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.0002, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.0002, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.0002, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.0002, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.0001, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(6.7731e-05, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.0001, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.0001, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.0001, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(7.0470e-05, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(5.7829e-05, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(8.6785e-05, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(8.5525e-05, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(8.2583e-05, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(5.5020e-05, device='cuda:0', grad_fn=<MseLossBackward0>)
+agent - Step Number = 16
+agent - Step Result.Action = EAST
+agent - Step Result.Observation = EMPTY
+agent - Step Result.Reward = 0
+BeliefTreeSolver - Time spent pruning = 1.8596649169921875e-05 seconds
+tensor(0.0027, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.0021, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.0014, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.0012, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.0015, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.0009, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.0003, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.0011, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.0013, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.0006, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.0007, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.0010, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.0005, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.0005, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.0005, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.0001, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.0003, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.0004, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.0002, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.0003, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.0004, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.0003, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.0002, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.0002, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.0001, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.0001, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.0002, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(7.8189e-05, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(5.6675e-05, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.0001, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.0001, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(6.0680e-05, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(8.3055e-05, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(8.2479e-05, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(3.6539e-05, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(4.2205e-05, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(4.0427e-05, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(2.3022e-05, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(4.4158e-05, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(4.1038e-05, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(2.0492e-05, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(3.5816e-05, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(3.4660e-05, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(1.5498e-05, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(2.1046e-05, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(1.9986e-05, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(6.9511e-06, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(1.1005e-05, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(1.5870e-05, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(9.9897e-06, device='cuda:0', grad_fn=<MseLossBackward0>)
+agent - Step Number = 17
+agent - Step Result.Action = EAST
+agent - Step Result.Observation = EMPTY
+agent - Step Result.Reward = 0
+BeliefTreeSolver - Time spent pruning = 1.6689300537109375e-05 seconds
+tensor(0.0012, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.0004, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.0008, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.0004, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.0005, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.0005, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(8.3022e-05, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.0005, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.0004, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.0002, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.0003, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.0002, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.0003, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.0002, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(3.8786e-05, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.0002, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.0001, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.0001, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.0001, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(6.0479e-05, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.0002, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(8.5291e-05, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(3.9699e-05, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(8.3833e-05, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(4.0263e-05, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(6.7868e-05, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(4.2618e-05, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(2.7756e-05, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(7.1068e-05, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(3.1333e-05, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(3.1115e-05, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(3.4049e-05, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(1.8121e-05, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(3.2808e-05, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(1.0576e-05, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(1.5654e-05, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(2.7750e-05, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(1.0810e-05, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(1.7399e-05, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(1.2348e-05, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(1.2014e-05, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(1.4843e-05, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(1.9298e-06, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(8.8056e-06, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(9.6630e-06, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(5.1622e-06, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(7.4150e-06, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(3.4870e-06, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(7.7377e-06, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(6.2623e-06, device='cuda:0', grad_fn=<MseLossBackward0>)
+agent - Step Number = 18
+agent - Step Result.Action = EAST
+agent - Step Result.Observation = EMPTY
+agent - Step Result.Reward = 0
+BeliefTreeSolver - Time spent pruning = 1.6450881958007812e-05 seconds
+tensor(0.0042, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.0026, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.0022, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.0018, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.0010, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.0002, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.0006, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.0014, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.0015, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.0014, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.0012, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.0010, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.0007, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.0003, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.0003, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.0004, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.0004, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.0004, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.0004, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.0006, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.0005, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.0003, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.0002, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.0001, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(7.9046e-05, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(5.6764e-05, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.0001, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.0002, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.0002, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.0002, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(0.0001, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(9.8107e-05, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(6.1950e-05, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(3.7545e-05, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(4.4390e-05, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(5.4184e-05, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(5.5641e-05, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(5.5562e-05, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(5.7740e-05, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(6.3820e-05, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(4.9419e-05, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(2.8142e-05, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(1.8551e-05, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(1.4327e-05, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(1.3867e-05, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(1.3412e-05, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(2.1323e-05, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(2.9487e-05, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(2.3854e-05, device='cuda:0', grad_fn=<MseLossBackward0>)
+tensor(1.6463e-05, device='cuda:0', grad_fn=<MseLossBackward0>)
+agent - Step Number = 19
+agent - Step Result.Action = EAST
+agent - Step Result.Observation = EMPTY
+agent - Step Result.Reward = 10.0
+agent - Terminated after episode step 20
+==========================================
+	Displaying history sequence
+==========================================
+id:  0
+action:  CHECK
+observation:  0
+next state:  (3,0) - 0 0 0 1 0 0 0 0 1 0 1 0 1 0 1 
+reward:  0
+==========================================
+id:  1
+action:  CHECK
+observation:  Good
+next state:  (3,0) - 0 0 0 1 0 0 0 0 1 0 1 0 1 0 1 
+reward:  0
+==========================================
+id:  2
+action:  NORTH
+observation:  EMPTY
+next state:  (2,0) - 0 0 0 1 0 0 0 0 1 0 1 0 1 0 1 
+reward:  0
+==========================================
+id:  3
+action:  EAST
+observation:  EMPTY
+next state:  (2,1) - 0 0 0 1 0 0 0 0 1 0 1 0 1 0 1 
+reward:  0
+==========================================
+id:  4
+action:  EAST
+observation:  EMPTY
+next state:  (2,2) - 0 0 0 1 0 0 0 0 1 0 1 0 1 0 1 
+reward:  0
+==========================================
+id:  5
+action:  EAST
+observation:  EMPTY
+next state:  (2,3) - 0 0 0 1 0 0 0 0 1 0 1 0 1 0 1 
+reward:  0
+==========================================
+id:  6
+action:  NORTH
+observation:  EMPTY
+next state:  (1,3) - 0 0 0 1 0 0 0 0 1 0 1 0 1 0 1 
+reward:  0
+==========================================
+id:  7
+action:  NORTH
+observation:  EMPTY
+next state:  (0,3) - 0 0 0 1 0 0 0 0 1 0 1 0 1 0 1 
+reward:  0
+==========================================
+id:  8
+action:  EAST
+observation:  EMPTY
+next state:  (0,4) - 0 0 0 1 0 0 0 0 1 0 1 0 1 0 1 
+reward:  0
+==========================================
+id:  9
+action:  SOUTH
+observation:  EMPTY
+next state:  (1,4) - 0 0 0 1 0 0 0 0 1 0 1 0 1 0 1 
+reward:  0
+==========================================
+id:  10
+action:  EAST
+observation:  EMPTY
+next state:  (1,5) - 0 0 0 1 0 0 0 0 1 0 1 0 1 0 1 
+reward:  0
+==========================================
+id:  11
+action:  EAST
+observation:  EMPTY
+next state:  (1,6) - 0 0 0 1 0 0 0 0 1 0 1 0 1 0 1 
+reward:  0
+==========================================
+id:  12
+action:  EAST
+observation:  EMPTY
+next state:  (1,7) - 0 0 0 1 0 0 0 0 1 0 1 0 1 0 1 
+reward:  0
+==========================================
+id:  13
+action:  EAST
+observation:  EMPTY
+next state:  (1,8) - 0 0 0 1 0 0 0 0 1 0 1 0 1 0 1 
+reward:  0
+==========================================
+id:  14
+action:  EAST
+observation:  EMPTY
+next state:  (1,9) - 0 0 0 1 0 0 0 0 1 0 1 0 1 0 1 
+reward:  0
+==========================================
+id:  15
+action:  EAST
+observation:  EMPTY
+next state:  (1,10) - 0 0 0 1 0 0 0 0 1 0 1 0 1 0 1 
+reward:  0
+==========================================
+id:  16
+action:  EAST
+observation:  EMPTY
+next state:  (1,11) - 0 0 0 1 0 0 0 0 1 0 1 0 1 0 1 
+reward:  0
+==========================================
+id:  17
+action:  EAST
+observation:  EMPTY
+next state:  (1,12) - 0 0 0 1 0 0 0 0 1 0 1 0 1 0 1 
+reward:  0
+==========================================
+id:  18
+action:  EAST
+observation:  EMPTY
+next state:  (1,13) - 0 0 0 1 0 0 0 0 1 0 1 0 1 0 1 
+reward:  0
+==========================================
+id:  19
+action:  EAST
+observation:  EMPTY
+next state:  (1,14) - 0 0 0 1 0 0 0 0 1 0 1 0 1 0 1 
+reward:  10.0
+======================================================================
+	Epoch #1 RESULTS
+======================================================================
+agent - discounted return statistics
+==========================================
+Name =  discounted return
+Running Total =  3.7735360253530716
+Mean =  3.7735360253530716
+Count =  1.0
+Variance =  0.0
+Max =  3.7735360253530716
+Min =  3.7735360253530716
+==========================================
+agent - undiscounted return statistics
+==========================================
+Name =  undiscounted return
+Running Total =  10.0
+Mean =  10.0
+Count =  1.0
+Variance =  0.0
+Max =  10.0
+Min =  10.0
+==========================================
+agent - Time
+==========================================
+Name =  Time
+Running Total =  15.97197961807251
+Mean =  15.97197961807251
+Count =  1.0
+Variance =  0.0
+Max =  15.97197961807251
+Min =  15.97197961807251
+==========================================
+agent - Total possible undiscounted return: 120
+==========================================
+RockModel - Actual rock states = [1, 0, 4, 8, 16, 32, 64, 128, 0, 0, 1024, 2048, 4096, 8192, 16384]
+
+
+agent - epochs: 1
+agent - ave undiscounted return/step: 10.0 +- 0.0
+agent - ave discounted return/step: 3.7735360253530716 +- 0.0
+agent - ave time/epoch: 15.97197961807251
