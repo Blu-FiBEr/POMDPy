@@ -69,7 +69,7 @@ class POMCP(BeliefTreeSolver):
         else:
             return self.model.ucb_coefficient * np.sqrt(old_div(log_n, action_map_entry_visit_count))
 
-    def select_eps_greedy_action(self, eps, start_time):
+    def select_eps_greedy_action(self, eps, start_time, first_sim_marker = 0):
         """
         Starts off the Monte-Carlo Tree Search and returns the selected action. If the belief tree
                 data structure is disabled, random rollout is used.
@@ -91,8 +91,7 @@ class POMCP(BeliefTreeSolver):
         y = np.array(y)
         X_tensor = torch.tensor(X).to(device = 'cuda')
         y_tensor = torch.tensor(y).to(device = 'cuda')
-        model = gb.q_network
-        model.train(X_tensor,y_tensor)
+        gb.q_network.train(X_tensor,y_tensor)
 
         
 

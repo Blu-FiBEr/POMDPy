@@ -2,7 +2,10 @@ import numpy as np
 import pomdpy.qnn as qnn
 bt_global = None
 # q_network = qnn.NN(15 , 0.001 , L2_reg=0.02)
-q_network = qnn.NN(50 , 0.001 , L2_reg=0.01, input_size=17, output_size=20)
+q_network = qnn.NN(2, 0.001, L2_reg=0.02, input_size=17,
+                   output_size=20, static_interval=1)
+first_time_marker = 0
+
 
 def get_belief_state(bn):
     pt_filter = bn.state_particles

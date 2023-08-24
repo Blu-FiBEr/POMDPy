@@ -1,5 +1,7 @@
 import random
 import numpy as np
+import pomdpy.globals as gb
+import torch
 
 
 # UCB1 action selection algorithm
@@ -13,14 +15,22 @@ def ucb_action(mcts, current_node, greedy):
 
     actions = list(mapping.entries.values())
     random.shuffle(actions)
-    for action_entry in actions:
+
+    
+
+    all_action_qvals = gb.q_network.predict(torch.tensor(gb.get_belief_state(current_node)).to(device = 'cuda'))
+    for i, action_entry in enumerate(actions):
 
         # Skip illegal actions
         if not action_entry.is_legal:
             continue
 
-        current_q = action_entry.mean_q_value
-
+        #current_q = action_entry.mean_q_value
+        # KESHAV current_q = QNN()
+        current_q = all_action_qvals[i]
+        if(gb.first_time_marker == 1): current_q = action_entry.mean_q_value
+        
+        
         # If the UCB coefficient is 0, this is greedy Q selection
         if not greedy:
             current_q += mcts.find_fast_ucb(N, action_entry.visit_count, log_n)

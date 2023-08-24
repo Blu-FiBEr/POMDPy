@@ -7,7 +7,8 @@ from pomdpy.util import console
 from pomdpy.pomdp.belief_tree import BeliefTree
 from pomdpy.solvers import Solver
 import pomdpy.globals as gb
-
+import torch
+import numpy as np
 module = "BeliefTreeSolver"
 
 
@@ -56,8 +57,21 @@ class BeliefTreeSolver(Solver):
         """
         for i in range(self.model.n_sims):
             # Reset the Simulator
+            
             self.model.reset_for_simulation()
             self.simulate(self.belief_tree_index, eps, start_time)
+            if(i % 25 == 0):
+                X = []
+                y = []
+                for bn in gb.bt_global.all_bn : 
+                    X.append(gb.get_belief_state(bn))
+                    y.append(gb.get_qvals(bn))
+                X = np.array(X)
+                y = np.array(y)
+                X_tensor = torch.tensor(X).to(device = 'cuda')
+                y_tensor = torch.tensor(y).to(device = 'cuda')
+                gb.q_network.train(X_tensor,y_tensor)
+                
 
     @abc.abstractmethod
     def simulate(self, belief, eps, start_time):

@@ -6,6 +6,8 @@ from pomdpy.pomdp import Statistic
 from pomdpy.pomdp.history import Histories, HistoryEntry
 from pomdpy.util import console, print_divider
 from experiments.scripts.pickle_wrapper import save_pkl
+import pomdpy.globals as gb
+import pomdpy.qnn as qnn
 
 module = "agent"
 
@@ -140,6 +142,10 @@ class Agent:
         self.model.reset_for_epoch()
 
         for i in range(self.model.n_epochs):
+            gb.q_network = None
+            gb.q_network = qnn.NN(2, 0.001, L2_reg=0.02, input_size=17,
+                   output_size=20, static_interval=1)
+            gb.first_time_marker = 0
         # for i in range(1):
             # Reset the epoch stats
             self.results = Results()
@@ -167,7 +173,8 @@ class Agent:
         discount = 1.0
 
         for i in range(self.model.max_steps):
-
+            gb.first_time_marker = 0
+            if(i == 0): gb.first_time_marker  = 1
             start_time = time.time()
 
             # action will be of type Discrete Action

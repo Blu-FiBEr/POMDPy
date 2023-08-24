@@ -1,0 +1,1 @@
+python pomcp.py --env RockSample --solver POMCP --max_steps 200 --epsilon_start 1.0 --epsilon_decay 0.99 --n_epochs 1 --n_sims 500  --preferred_actions --seed 123 > output.txt
