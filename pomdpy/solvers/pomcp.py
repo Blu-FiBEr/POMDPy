@@ -91,8 +91,8 @@ class POMCP(BeliefTreeSolver):
         y = np.array(y)
         X_tensor = torch.tensor(X).to(device = 'cuda')
         y_tensor = torch.tensor(y).to(device = 'cuda')
-        model = gb.q_network
-        model.train(X_tensor,y_tensor)
+        gb.q_network.train(X_tensor,y_tensor)
+        
 
         
 

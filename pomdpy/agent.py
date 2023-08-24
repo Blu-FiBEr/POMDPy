@@ -6,7 +6,8 @@ from pomdpy.pomdp import Statistic
 from pomdpy.pomdp.history import Histories, HistoryEntry
 from pomdpy.util import console, print_divider
 from experiments.scripts.pickle_wrapper import save_pkl
-
+import pomdpy.globals as gb
+import pomdpy.qnn as qnn
 module = "agent"
 
 
@@ -142,6 +143,9 @@ class Agent:
         for i in range(self.model.n_epochs):
         # for i in range(1):
             # Reset the epoch stats
+            gb.q_network = None
+            gb.q_network = qnn.NN(50, 0.001, L2_reg=0.01, input_size=17,
+                   output_size=20)
             self.results = Results()
 
             if self.model.solver == 'POMCP':

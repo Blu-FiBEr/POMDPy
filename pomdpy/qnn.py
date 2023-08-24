@@ -51,3 +51,8 @@ class NN:
             self.optimizer.zero_grad()
             loss.backward()
             self.optimizer.step()
+
+
+    def predict(self, X):
+            X = X.to(torch.float32)
+            return self.model(X)
