@@ -27,7 +27,7 @@ def ucb_action(mcts, current_node, greedy):
         #current_q = action_entry.mean_q_value
         # KESHAV current_q = QNN()
         current_q = all_action_qvals[i]
-        if(gb.first_time_marker == 1): current_q = action_entry.mean_q_value
+        # if(gb.first_time_marker == 1): current_q = action_entry.mean_q_value
 
         # If the UCB coefficient is 0, this is greedy Q selection
         if not greedy:
