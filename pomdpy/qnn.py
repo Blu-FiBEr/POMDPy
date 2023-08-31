@@ -22,11 +22,11 @@ class NN:
             # nn.Linear(512, 256),
             # nn.ReLU(),
             # nn.Linear(256, output_size)
-            nn.Linear(input_size, 4),
+            nn.Linear(input_size, 8),
             nn.ReLU(),
-            nn.Linear(4, 4),
+            nn.Linear(8, 8),
             nn.ReLU(),
-            nn.Linear(4, output_size)
+            nn.Linear(8, output_size)
         ).to("cuda")
 
         if (self.metric == "MSE"):

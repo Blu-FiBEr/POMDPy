@@ -144,8 +144,9 @@ class Agent:
         # for i in range(1):
             # Reset the epoch stats
             gb.q_network = None
-            gb.q_network = qnn.NN(50, 0.001, L2_reg=0.01, input_size=17,
-                   output_size=20)
+            # gb.q_network = qnn.NN(50, 0.001, L2_reg=0.01, input_size=17,
+                #    output_size=20)
+            gb.q_network = qnn.NN(60, 0.001, input_size=17, output_size=20)
             self.results = Results()
 
             if self.model.solver == 'POMCP':
