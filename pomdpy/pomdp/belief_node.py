@@ -25,14 +25,18 @@ class BeliefNode(object):
         self.depth = -1
         self.action_map = None
         self.state_particles = []   # The set of states that comprise the belief distribution of this belief node
+        
 
         if parent_entry is not None:
             self.parent_entry = parent_entry
             # Correctly calculate the depth based on the parent node.
             self.depth = self.get_parent_belief().depth + 1
+            # self.history = self.get_parent_belief().history
+            # self.history.append()
         else:
             self.parent_entry = None
             self.depth = 0
+            self.history = []
 
     def copy(self):
         bn = BeliefNode(self.solver, self.id, self.parent_entry)
@@ -41,6 +45,7 @@ class BeliefNode(object):
         # share a reference to the action map
         bn.action_map = self.action_map
         bn.state_particles = self.state_particles
+        # bn.history = self.history
         return bn
 
     # Randomly select a History Entry
@@ -56,12 +61,13 @@ class BeliefNode(object):
 
     def get_parent_belief(self):
         if self.parent_entry is not None:
+            #return the immediate ancestral belief node
             return self.parent_entry.map.owner.parent_entry.map.owner
         else:
             return None
 
     # Returns the last observation received before this belief
-    def get_last_observation(self):
+    def get_last_observation(self):      
         if self.parent_entry is not None:
             self.parent_entry.get_observation()
         else:

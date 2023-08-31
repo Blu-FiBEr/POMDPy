@@ -13,15 +13,20 @@ class NN:
         self.epochs = num_epochs
         self.L2_reg = L2_reg
         self.model = nn.Sequential(
-            nn.Linear(input_size, 128),
+            # nn.Linear(input_size, 128),
+            # nn.ReLU(),
+            # nn.Linear(128, 256),
+            # nn.ReLU(),
+            # nn.Linear(256, 512),
+            # nn.ReLU(),
+            # nn.Linear(512, 256),
+            # nn.ReLU(),
+            # nn.Linear(256, output_size)
+            nn.Linear(input_size, 4),
             nn.ReLU(),
-            nn.Linear(128, 256),
+            nn.Linear(4, 4),
             nn.ReLU(),
-            nn.Linear(256, 512),
-            nn.ReLU(),
-            nn.Linear(512, 256),
-            nn.ReLU(),
-            nn.Linear(256, output_size)
+            nn.Linear(4, output_size)
         ).to("cuda")
 
         if (self.metric == "MSE"):
