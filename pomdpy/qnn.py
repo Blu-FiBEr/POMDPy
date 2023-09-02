@@ -33,7 +33,7 @@ class NN:
             self.loss_function = nn.MSELoss()
         # self.optimizer = optim.SGD(self.model.parameters(
         # ), lr=self.learning_rate, weight_decay=self.L2_reg)
-        self.optimizer = optim.Adam(
+        self.optimizer = optim.SGD(
             self.model.parameters(), lr=self.learning_rate)
 
         # acc = torchmetrics.Accuracy(n_classes=10).to('cuda')
@@ -43,19 +43,42 @@ class NN:
         # test_accuracies = []
 
     def train(self,  X, y):
-        loss_GD = []
-#         print(X.dtype , nn.Linear(10, 1, bias=False)
-# .weight.dtype)
-        X = X.to(torch.float32)
-        y = y.to(torch.float32)
-        for epoch in range(self.epochs):
-            y_pred = self.model(X)
-            loss = self.loss_function(y_pred, y)
-            loss_GD.append(loss)
-            print(loss_GD[-1])
-            self.optimizer.zero_grad()
-            loss.backward()
-            self.optimizer.step()
+         X = X.to(torch.float32)        
+         y = y.to(torch.float32)
+         for epoch in range(self.epochs):
+            for i in range(0, len(X), 5):
+                inputs = X[i:i+5]
+                labels = y[i:i+5]
+
+                # Zero the gradients
+                self.optimizer.zero_grad()
+
+                # Forward pass
+                outputs =self.model(inputs)
+
+                # Compute the loss
+                loss = self.loss_function(outputs, labels)
+                if(i % 20 == 0): print(loss)
+                # Backpropagation
+                loss.backward()
+
+                # Update the model's parameters
+                self.optimizer.step()
+#         loss_GD = []
+# #         print(X.dtype , nn.Linear(10, 1, bias=False)
+# # .weight.dtype)
+#         X = X.to(torch.float32)
+#         y = y.to(torch.float32)
+#         for epoch in range(self.epochs):
+#             y_pred = self.model(X)
+#             loss = self.loss_function(y_pred, y)
+#             loss_GD.append(loss)
+#             print(loss_GD[-1])
+#             self.optimizer.zero_grad()
+#             loss.backward()
+#             self.optimizer.step()
+            
+        
 
 
     def predict(self, X):

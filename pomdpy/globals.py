@@ -3,7 +3,7 @@ import pomdpy.qnn as qnn
 bt_global = None
 # q_network = qnn.NN(15 , 0.001 , L2_reg=0.02)
 # q_network = qnn.NN(50, 0.0001, L2_reg=0.01, input_size=17, output_size=20)
-q_network = qnn.NN(60, 0.001, input_size=17, output_size=20)
+q_network = qnn.NN(10, 0.000001, input_size=17, output_size=20)
 
 
 def get_belief_state(bn):
