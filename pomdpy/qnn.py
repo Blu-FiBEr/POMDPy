@@ -24,7 +24,9 @@ class NN:
             # nn.Linear(256, output_size)
             nn.Linear(input_size, 8),
             nn.ReLU(),
-            nn.Linear(8, 8),
+            nn.Linear(8, 4),
+            nn.ReLU(),
+            nn.Linear(4, 8),
             nn.ReLU(),
             nn.Linear(8, output_size)
         ).to("cuda")
@@ -45,7 +47,9 @@ class NN:
     def train(self,  X, y):
          X = X.to(torch.float32)        
          y = y.to(torch.float32)
+         print(len(X))
          for epoch in range(self.epochs):
+            
             for i in range(0, len(X), 5):
                 inputs = X[i:i+5]
                 labels = y[i:i+5]

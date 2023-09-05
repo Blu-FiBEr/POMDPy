@@ -155,7 +155,7 @@ class Agent:
 
             if self.experiment_results.time.running_total > self.model.timeout:
                 console(2, module, 'Timed out after ' + str(i) + ' epochs in ' +
-                        self.experiment_results.time.running_total + ' seconds')
+                        str(self.experiment_results.time.running_total) + ' seconds')
                 break
 
     def run_pomcp(self, epoch, eps):
